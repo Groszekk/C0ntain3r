@@ -5,3 +5,6 @@ My own linux container for honeypot project
 go build main.go
 ./main
 ```
+### Libraries
+iptables wrapper - github.com/coreos/go-iptables/iptables
+netlink - github.com/vishvananda/netlink
