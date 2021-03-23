@@ -5,4 +5,7 @@ type Config struct {
 	StartBinary string
 	HostName string
 	RootFileSystem string
+	BridgeIP string
+	HostInterface string
+	BridgeName string
 }

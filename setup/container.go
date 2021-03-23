@@ -6,6 +6,7 @@ import (
 	"os/exec"
 	"syscall"
 	"Container/models"
+	"Container/network"
 )
 
 func Parent(config models.Config) {
@@ -34,7 +35,7 @@ func Parent(config models.Config) {
 	cmd.Env = config.Env
 
 	checkErr(cmd.Start())
-
+	checkErr(network.SetNetwork(cmd.Process.Pid, config))
 	checkErr(cmd.Wait())
 }
 
