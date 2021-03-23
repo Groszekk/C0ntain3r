@@ -16,10 +16,9 @@ func main() {
 	HostInterface:"eth0",
 	BridgeName:"c0ntain3r_bridge",
 	}
-	switch os.Args[1] { // little hack for re-execution
-	case "run":
-		setup.Parent(config)
-	case "child":
+	if len(os.Args) > 1 {
 		setup.Child(config)
+	}else{
+		setup.Parent(config)
 	}
 }
