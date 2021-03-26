@@ -35,7 +35,7 @@ func Parent(config models.Config) {
 	cmd.Env = config.Env
 
 	checkErr(cmd.Start())
-	checkErr(network.SetNetwork(cmd.Process.Pid, config))
+	checkErr(network.SetNetworkInterfaces(cmd.Process.Pid, config))
 	checkErr(cmd.Wait())
 }
 
