@@ -8,4 +8,5 @@ type Config struct {
 	BridgeIP string
 	HostInterface string
 	BridgeName string
+	VethPair VethPair
 }
